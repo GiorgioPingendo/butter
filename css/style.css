@@ -926,12 +926,12 @@ blockquote cite:before {
     text-transform: uppercase;
 }
 .logo {
-    padding: 0;
+    /* padding: 0; */
 }
 .logo-img {
-    padding: 20px 0;
+    /* padding: 20px 0;
     width: 140px;
-    text-align: center;
+    text-align: center; */
 }
 .dropdown .nav-link i {
     padding-left: 0px;
