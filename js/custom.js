@@ -16,14 +16,15 @@
 12. Blog owlCarousel
 13. MagnificPopup Gallery
 14. Scroll back to top
-15. Slider
-16. Faqs Accordion Box
-17. Contact Form
-18. Select2
-19. Datepicker
-20. Magnet Cursor
-21. Mouse Cursor
-22. Process Accrodion
+15. Smooth Scrolling
+16. Slider
+17. Faqs Accordion Box
+18. Contact Form
+19. Select2
+20. Datepicker
+21. Magnet Cursor
+22. Mouse Cursor
+23. Process Accrodion
 
 
 ------------------------------------------------------- */
@@ -72,6 +73,14 @@ $(function () {
     $(".navbar-nav .dropdown-item a").on('click', function () {
         $(".navbar-collapse").removeClass("show");
     });
+    
+    // Close mobile menu "on click"
+    $(function(){ 
+         var navMain = $(".navbar-collapse");
+         navMain.on("click", "a", null, function () {
+             navMain.collapse('hide');
+         });
+     });
     
     // Sections background image from data background
     var pageSection = $(".bg-img, section");
@@ -252,6 +261,38 @@ $(function () {
         preloader: false,
         fixedContentPos: false
     });
+    
+    
+    // Smooth Scrolling
+    $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]').not('[href="#0"]').click(function (event) {
+            // On-page links
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000, function () {
+                        // Callback after animation
+                        // Must change focus!
+                        var $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                        } else {
+                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                        };
+                    });
+                }
+            }
+        });
     
     //  Scroll back to top
     var progressPath = document.querySelector('.progress-wrap path');

@@ -422,6 +422,7 @@ blockquote cite:before {
     outline: none;
 }
 
+
 /* ======= Preloader style ======= */
 .preloader-bg,
 #preloader {
@@ -780,7 +781,6 @@ blockquote cite:before {
     width: 70px;
     border-top: 1px solid #904d30 !important;
 }
-
 
 
 /* ======= Navbar style ======= */
@@ -4313,16 +4313,20 @@ select {
     .header .caption h1 {
         font-size: 55px;
     }
+    
     .price-banner .content {
         width: 100%;
         padding: 45px 15px;
     }
+    
     .section-number {
     font-size: 125px;
     }
+    
     .comming h1 {
     font-size: 45px;
     }
+    
     .comming h3 {
         font-size: 45px
     }
