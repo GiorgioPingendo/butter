@@ -1956,6 +1956,16 @@ hr {
     right: 0;
     background: #101010;
 }
+
+
+
+/* New rule for large desktops */
+@media (min-width: 1200px) {
+    .team .item.right .caption {
+        right: -40px !important;
+    }
+}
+
 .team .item .caption.padding-left {
     padding-left: 45px;
 }
