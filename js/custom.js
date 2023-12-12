@@ -152,13 +152,13 @@ $(function () {
     
     // Team owlCarousel
     $('.team .owl-carousel').owlCarousel({
-        loop: true,
-        margin: 30,
+        loop: false,
+        margin: 0,
         mouseDrag: true,
         autoplay: false,
         dots: true,
         autoplayHoverPause: true,
-        nav: false,
+        nav: true,
         navText: ["<span class='lnr ti-angle-left'></span>", "<span class='lnr ti-angle-right'></span>"],
         responsiveClass: true,
         responsive: {
