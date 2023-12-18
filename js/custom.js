@@ -550,4 +550,39 @@ $(function () {
     $(".accordion").on("click", ".item", function () {
         $(this).addClass("active").siblings().removeClass("active");
     });
+
+
+
+
+
+
+
+        var emailElement = document.getElementById('emailToCopy');
+
+
+        if (emailElement) {
+            emailElement.addEventListener('click', function () {
+                // Copy text to clipboard
+                navigator.clipboard.writeText(this.innerText).then(() => {
+                    // Change tooltip title to 'Copied'
+                    var tooltipTriggerEl = document.getElementById('emailToCopy');
+                    var tooltip = bootstrap.Tooltip.getInstance(tooltipTriggerEl);
+                    tooltip.setContent({ '.tooltip-inner': 'Copied' });
+
+                    // Reset the tooltip title after some time
+                    setTimeout(() => {
+                        tooltip.setContent({ '.tooltip-inner': 'Click to copy' });
+                    }, 2000);
+                });
+            });
+        }
+
+        // Initialize Bootstrap tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+
+
 });
