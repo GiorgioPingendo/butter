@@ -2215,7 +2215,7 @@ hr {
 .clients .clients-logo {
     opacity: 1;
     line-height: 0;
-    border: 1px solid rgba(255,255,255,0.05);
+    /* border: 1px solid rgba(255,255,255,0.05); */
 }
 .clients .clients-logo:hover {
     opacity: 1;
