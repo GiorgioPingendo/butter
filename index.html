@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta property="og:url" content="https://luchalibrestudio.art/" />
     
-
     <title>Lucha Libre Studio</title>
     <meta name="description" content="Siamo due Film Makers, quelli del Plot Twist Suplex ¡Luchadores de Corazón, Guerrero por Tradición! #SomosLuchadores #FilmMakers #VFX">
     <meta property="og:title" content="Lucha Libre Studio" />
@@ -20,8 +19,8 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
-  
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
+	
     <style>
         /* CSS for Desktop */
         @media (min-width: 768px) {
@@ -308,7 +307,9 @@
                     <div class="owl-carousel owl-theme">
 
                         <div class="item right">
-                            <figure><img src="img/team/Luchadores.jpg" alt="Siamo quelli del Plot Twist Suplex. ¡Luchadores de Corazón, Guerrero por Tradición! #SomosLuchadores #FilmMakers #VFX" class="img-fluid"></figure>
+                            <figure><img src="img/team/Luchadores.jpg"
+                                    alt="Siamo quelli del Plot Twist Suplex. ¡Luchadores de Corazón, Guerrero por Tradición! #SomosLuchadores #FilmMakers #VFX"
+                                    class="img-fluid"></figure>
 
                             <div class="caption padding-left">
                                 <div class="name">LUCHA LIBRE</div>
@@ -331,7 +332,8 @@
                                 <p>Regista e direttore della fotografia. Nel 2012 dirige Poker Generation, un
                                     lungometraggio distribuito
                                     da Iris con F. Pannofino e L. Sastri. Collabora con Combocut Film dal 2014 al 2020
-                                    contribuendo alla realizazzione di campagne adv e acclamati contenuti web come "Educazione Cinica".
+                                    contribuendo alla realizazzione di campagne adv e acclamati contenuti web come
+                                    "Educazione Cinica".
                                     Dirige videoclip per artisti come Eman, Tonino Carotone, La Crus e Carmen Consoli.
                                 </p>
                             </div>
@@ -341,7 +343,8 @@
                             <div class="caption padding-left">
                                 <div class="name">DAVIDE</div>
                                 <div class="subname">FOUNDER - ART DIRECTOR - VFX SUPERVISOR</div>
-                                <p>Digital artist, grafico e visual effect artist, vanta 12 anni di esperienza presso Sky,
+                                <p>Digital artist, grafico e visual effect artist, vanta 12 anni di esperienza presso
+                                    Sky,
                                     contribuendo a promo di
                                     cinema, sport e intrattenimento. Ha collaborato con talent come Alessandro Cattelan
                                     e Alex Del Piero.
@@ -457,8 +460,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="footer-bottom-inner >
-                            <p class="footer-bottom-copy-right">2023 © All rights reserved.
-                                <a target="_blank" href="https://pingendo.com"> Made with Pingendo </a>
+                            <p class=" footer-bottom-copy-right">2023 © All rights reserved.
+                            <a target="_blank" href="https://pingendo.com"> Made with Pingendo </a>
                             </p>
                         </div>
                     </div>
@@ -467,6 +470,10 @@
         </div>
 
     </footer>
+
+    <script async src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+    
     <!-- jQuery -->
     <script src="js/jquery-3.6.3.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.min.js"></script>
@@ -486,6 +493,33 @@
     <script src="js/select2.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/custom.js"></script>
+
+
+    <script>
+
+        window.addEventListener("load", function () {
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#252e39"
+                    },
+                    "button": {
+                        "background": "transparent",
+                        "text": "#14a7d0",
+                        "border": "#14a7d0"
+                    }
+                },
+                "content": {
+                    "message": "Questo sito utilizza cookie tecnici e di profilazione propri e di terze parti per le sue funzionalità e per inviarti pubblicità e servizi in linea con le tue preferenze.",
+                    "dismiss": "Ho capito",
+                    "link": "Maggiori informazioni.",
+                    "href": "https://www.lacasadiriposo.it/privacy"
+                }
+            })
+        });
+
+
+    </script>
 </body>
 
 </html>
